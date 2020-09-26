@@ -1,9 +1,22 @@
 import React from "react";
 import { BrowserRouter, Route } from "react-router-dom";
 
+// App Components
+import Header from "./Header";
+import Home from "./Home";
+import About from "./About";
+import Teachers from "./Teachers";
+import Courses from "./Courses";
+
 const App = () => (
   <BrowserRouter>
-    <div className="container"></div>
+    <div className="container">
+      <Header />
+      <Route exact path="/" component={Home} />
+      <Route exact path="/about" render={() => <About title="About" />} />
+      <Route exact path="/teachers" component={Teachers} />
+      <Route exact path="/courses" component={Courses} />
+    </div>
   </BrowserRouter>
 );
 
