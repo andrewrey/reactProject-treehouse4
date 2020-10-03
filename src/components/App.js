@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter, Route, Switch } from "react-router-dom";
+import { HashRouter, Route, Switch } from "react-router-dom";
 
 // App Components
 import Header from "./Header";
@@ -11,7 +11,7 @@ import NotFound from "./NotFound";
 import Featured from "./Featured";
 
 const App = () => (
-  <BrowserRouter>
+  <HashRouter basename="/reactProject-treehouse4">
     <div className="container">
       <Header />
       <Switch>
@@ -23,7 +23,7 @@ const App = () => (
         <Route component={NotFound} />
       </Switch>
     </div>
-  </BrowserRouter>
+  </HashRouter>
 );
 
 export default App;
